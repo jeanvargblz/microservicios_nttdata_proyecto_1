@@ -1,13 +1,13 @@
-package com.nttdata.demo1.demo1;
+package com.proyecto1.banca;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Demo1Application {
+public class BancaApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Demo1Application.class, args);
+		SpringApplication.run(BancaApplication.class, args);
 	}
 
 }
