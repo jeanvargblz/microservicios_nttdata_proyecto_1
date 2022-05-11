@@ -18,5 +18,5 @@ public class Client {
     private Integer balance; //Saldo
     private Integer maximunMovements; // Limite maximo de movimientos
     private Integer maintenanceCost; //Costo/Comision de mantenimiento
-    private Integer credit; // Credito
+    private Integer credit; // Credito bancario (efectivo)
 }
