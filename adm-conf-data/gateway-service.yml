@@ -1,0 +1,30 @@
+server:
+  port: 8880
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8880/eureka/
+
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: banca
+          uri: http://localhost:8081/historicos
+          predicates:
+            - Path=/historicos/**
+        - id: config-server
+          uri: http://localhost:8082/customers
+          predicates:
+            - Path=/customers/**
+        - id: service-registry
+          uri: http://localhost:8083/products
+          predicates:
+            - Path=/products/**
+        - id: api_gateway
+          uri: http://localhost:8084/type-products
+          predicates:
+            - Path=/type-products/**
